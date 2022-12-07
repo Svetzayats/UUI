@@ -3304,6 +3304,11 @@
         "name": "color",
         "value": "white | red | gray90",
         "comment": "<p>Tooltip color</p>"
+      },
+      {
+        "name": "maxWidth",
+        "value": "string",
+        "comment": "<p>Tooltip max width</p>"
       }
     ],
     "D:/dev/UUI-develop/epam-promo/components/pickers/docs/pickerInput.doc.tsx": [
