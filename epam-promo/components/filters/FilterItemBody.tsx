@@ -1,6 +1,6 @@
 import React from "react";
 import { FilterPickerBody } from "./FilterPickerBody";
-import { FilterDataPickerBody } from "./FilterDataPickerBody";
+import { FilterDatePickerBody } from "./FilterDatePickerBody";
 import { FilterRangeDatePickerBody } from "./FilterRangeDatePickerBody";
 import { IFilterItemBodyProps } from "@epam/uui-core";
 import { FilterNumericBody } from "./FilterNumericBody";
@@ -31,7 +31,7 @@ export const FilterItemBody = (props: IFilterItemBodyProps<any>) => {
             );
         case "datePicker":
             return (
-                <FilterDataPickerBody
+                <FilterDatePickerBody
                     { ...props }
                     format={ props.format || "DD/MM/YYYY" }
                 />

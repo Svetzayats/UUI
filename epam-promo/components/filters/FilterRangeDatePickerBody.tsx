@@ -21,6 +21,7 @@ export class FilterRangeDatePickerBody extends BaseRangeDatePicker<RangeDatePick
             <>
                 <FlexRow borderBottom="gray40">
                     <RangeDatePickerBody
+                        cx={ cx(this.props.bodyCx, 'date-range-picker-vars', 'date-picker-vars') }
                         value={ this.getValue() }
                         onValueChange={ this.onRangeChange }
                         filter={ this.props.filter }
@@ -30,10 +31,10 @@ export class FilterRangeDatePickerBody extends BaseRangeDatePicker<RangeDatePick
                 </FlexRow>
                 <FlexCell alignSelf="stretch">
                     <FlexRow padding="24" vPadding="12">
-                        <div className={ cx(css.dateInputGroup, this.state.inFocus && uuiMod.focus) }>
+                        <div className={ cx(this.props.inputCx, 'date-range-picker-vars', css.dateInputGroup, this.state.inFocus && uuiMod.focus) }>
                             <TextInput
                                 icon={ systemIcons['30'].calendar }
-                                cx={ cx(css.dateInput, css['size-30'], this.state.inFocus === 'from' && uuiMod.focus) }
+                                cx={ cx(this.props.bodyCx, 'date-range-picker-vars', css.dateInput, css['size-30'], this.state.inFocus === 'from' && uuiMod.focus) }
                                 size={ '30' }
                                 placeholder={ i18n.rangeDatePicker.pickerPlaceholderFrom }
                                 value={ dayjs(this.state.inputValue.from).isValid() ? dayjs(this.state.inputValue.from).format(this.props.format || 'MMM DD, YYYY') : this.state.inputValue.from }
@@ -43,7 +44,7 @@ export class FilterRangeDatePickerBody extends BaseRangeDatePicker<RangeDatePick
                             />
                             <div className={ css.separator }/>
                             <TextInput
-                                cx={ cx(css.dateInput, css['size-30'], this.state.inFocus === 'to' && uuiMod.focus) }
+                                cx={ cx(this.props.bodyCx, 'date-range-picker-vars', css.dateInput, css['size-30'], this.state.inFocus === 'to' && uuiMod.focus) }
                                 placeholder={ i18n.rangeDatePicker.pickerPlaceholderTo }
                                 size={ '30' }
                                 value={ dayjs(this.state.inputValue.to).isValid() ? dayjs(this.state.inputValue.to).format(this.props.format || 'MMM DD, YYYY') : this.state.inputValue.to }

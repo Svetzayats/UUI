@@ -1,14 +1,14 @@
 import React from 'react';
 import dayjs from "dayjs";
 import { i18n } from "../../i18n";
-import { DatePickerCoreProps, IDropdownBodyProps } from "@epam/uui-core";
+import { cx, DatePickerCoreProps, IDropdownBodyProps } from "@epam/uui-core";
 import { BaseDatePicker, DatePickerState } from '@epam/uui-components';
 import { FlexSpacer, LinkButton, FlexRow, FlexCell, Text } from '../../index';
 import { DatePickerBody } from "@epam/uui";
 
 export interface DatePickerProps extends DatePickerCoreProps, IDropdownBodyProps {}
 
-export class FilterDataPickerBody extends BaseDatePicker<DatePickerProps> {
+export class FilterDatePickerBody extends BaseDatePicker<DatePickerProps> {
     state: DatePickerState = {
         ...super.getValue(),
         isOpen: false,
@@ -35,6 +35,7 @@ export class FilterDataPickerBody extends BaseDatePicker<DatePickerProps> {
             <>
                 <FlexRow borderBottom="gray40">
                     <DatePickerBody
+                        cx={ cx(this.props.bodyCx, 'date-picker-vars') }
                         filter={ this.props.filter }
                         value={ this.getValue() }
                         setSelectedDate={ this.setSelectedDate }
