@@ -5,6 +5,7 @@ import * as types from '../../components/types';
 import styles from '../../assets/styles/scss/loveship-color-vars.scss';
 import buttonCss from '../buttons/Button.scss';
 import css from './Badge.scss';
+import { FillStyle } from "@epam/uui";
 
 const defaultSize = '18';
 
@@ -22,7 +23,7 @@ export interface BadgeMods extends types.ColorMod {
     /** Badge shape: square or round */
     shape?: types.ControlShape;
     /** Badge fill style */
-    fill?: types.FillStyle  | 'semitransparent' | 'transparent';
+    fill?: FillStyle  | 'semitransparent' | 'transparent';
     /** Badge size */
     size?: '12' | '18' | '24' | '30' | '36' | '42' | '48';
 }

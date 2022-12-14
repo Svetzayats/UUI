@@ -5,6 +5,7 @@ import * as types from '../../components/types';
 import styles from '../../assets/styles/scss/loveship-color-vars.scss';
 import buttonCss from '../buttons/Button.scss';
 import css from './Tag.scss';
+import { FillStyle } from "@epam/uui";
 
 export type TagSize = '18' | '24' | '30' | '36' | '42' | '48';
 
@@ -20,7 +21,7 @@ const mapSize = {
 const defaultSize = '18';
 
 export interface TagMods extends types.ColorMod {
-    fill?: types.FillStyle;
+    fill?: FillStyle;
     size?: TagSize;
 }
 

@@ -5,12 +5,13 @@ import * as types from '../types';
 import buttonCss from '../buttons/Button.scss';
 import css from './PageButton.scss';
 import styles from '../../assets/styles/colorvars/buttons/button-colorvars.scss';
+import { FillStyle } from "@epam/uui";
 
 const defaultSize = '30';
 
 export interface PageButtonMods {
     size?: '24' | '30';
-    fill?: types.FillStyle;
+    fill?: FillStyle;
     color?: ButtonColor;
 }
 

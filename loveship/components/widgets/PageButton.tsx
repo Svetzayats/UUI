@@ -3,12 +3,13 @@ import css from './PageButton.scss';
 import { withMods } from '@epam/uui-core';
 import { Button } from '../buttons';
 import { ButtonProps } from '@epam/uui-components';
+import { FillStyle } from "@epam/uui";
 
 const defaultSize = '30';
 
 export interface PageButtonMods extends types.ColorMod {
     size?: '24' | '30';
-    fill?: types.FillStyle;
+    fill?: FillStyle;
 }
 
 export function applyPageButtonMods(mods: PageButtonMods & ButtonProps) {

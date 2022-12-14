@@ -1,9 +1,6 @@
 export type ControlShape = 'square' | 'round';
 export const allBorderStyles: ControlShape[] = ['square', 'round'];
 
-export type FillStyle = 'solid' | 'white' | 'light' | 'none';
-export const allFillStyles: FillStyle[] = ['solid', 'white', 'light', 'none'];
-
 export type ControlSize = 'none' | '24' | '30' | '36' | '42' | '48';
 export const allSizes: ControlSize[] = ['24', '30', '36', '42', '48'];
 

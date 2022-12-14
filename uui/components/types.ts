@@ -1,6 +1,9 @@
 export type ButtonMode = 'solid' | 'outline' | 'ghost' | 'none';
 export const allButtonModes: ButtonMode[] = ['solid', 'outline', 'ghost', 'none'];
 
+export type FillStyle = 'solid' | 'white' | 'light' | 'none';
+export const allFillStyles: FillStyle[] = ['solid', 'white', 'light', 'none'];
+
 export type ControlSize = 'none' | '24' | '30' | '36' | '42' | '48';
 export const allSizes: ControlSize[] = ['24', '30', '36', '42', '48'];
 

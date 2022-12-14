@@ -1,13 +1,13 @@
 import { Button as uuiButton, UUIButtonProps, ButtonMode, ButtonMods as UuiButtonMods } from '@epam/uui';
 import { withMods } from '@epam/uui-core';
-import { FillStyle } from '../types';
+import { FillStyle } from '@epam/uui';
 
 
 export type ButtonColor = 'blue' | 'green' | 'red' | 'gray50';
 export const allButtonColors: ButtonColor[] = ['blue', 'green', 'red', 'gray50'];
 
 
-export interface ButtonMods extends Omit<UuiButtonMods, 'color'> {
+export interface ButtonMods {
     fill?: FillStyle;
     color?: ButtonColor;
 }

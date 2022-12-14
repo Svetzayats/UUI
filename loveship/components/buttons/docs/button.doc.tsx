@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { allBorderStyles, allFillStyles, allEpamPrimaryColors } from '../../types';
+import { allBorderStyles, allEpamPrimaryColors } from '../../types';
 import { Button, ButtonMods } from '../Button';
 import { ColorPicker, DocBuilder } from '@epam/uui-docs';
 import { ButtonProps } from '@epam/uui-components';
 import { basicPickerTogglerDoc, DefaultContext, dropdownTogglerDoc, FormContext, iCanRedirectDoc,
     iconOptionsDoc, iconWithInfoDoc, iHasPlaceholder, isDisabledDoc, onClickDoc, ResizableContext, textSettingsDoc } from '../../../docs';
 import { colors } from '../../../helpers/colorMap';
+import { allFillStyles } from "@epam/uui";
 
 const ButtonDoc = new DocBuilder<ButtonProps & ButtonMods>({ name: 'Button', component: Button })
     .prop('size', { examples: ['18', "24", "30", "36", "42", "48"] , defaultValue: '36' })

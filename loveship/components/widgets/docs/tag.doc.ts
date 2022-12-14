@@ -1,8 +1,9 @@
-import { Tag, allFillStyles, TagMods } from '../../../components/index';
+import { Tag, TagMods } from '../../../components/index';
 import { DocBuilder, dropdownTogglerDoc } from '@epam/uui-docs';
 import { ButtonProps } from '@epam/uui-components';
 import { DefaultContext, FormContext, ResizableContext  } from '../../../docs/index';
 import { iconDoc, iconOptionsDoc, basicPickerTogglerDoc, colorDoc } from '../../../docs/index';
+import { allFillStyles } from "@epam/uui";
 
 const tagDoc = new DocBuilder<ButtonProps & TagMods>({ name: 'Tag', component: Tag })
     .implements([colorDoc, iconDoc, basicPickerTogglerDoc, dropdownTogglerDoc, iconOptionsDoc])
