@@ -9,9 +9,9 @@ export interface MultiSwitchMods {
     color?: MultiSwitchColor;
 }
 
-const mapColorToMod: Record<UuiMultiSwitchColor, MultiSwitchColor> = {
-    primary: 'blue',
-    secondary: 'gray50',
+const mapColorToMod: Record<MultiSwitchColor, UuiMultiSwitchColor> = {
+    blue: 'primary',
+    gray50: 'secondary',
 };
 
 export const applyMultiSwitchMods = () => ['uui-theme-promo'];
@@ -20,9 +20,9 @@ export const MultiSwitch = withMods(
     UuiMultiSwitch,
     applyMultiSwitchMods,
     (props) => ({
-        color: mapColorToMod[props.color] || mapColorToMod.primary,
+        color: props.color || mapColorToMod.blue,
     }),
-) as <TValue>(props: (Omit<UuiMultiSwitchProps<TValue>, 'color'> & MultiSwitchMods)) => JSX.Element;
+) as <TValue>(props: (Omit<UuiMultiSwitchProps<TValue>, 'color' & MultiSwitchMods>)) => JSX.Element;
 
 
 // Previous variant without theme UUI:
