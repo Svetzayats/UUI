@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IEditable, IHasRawProps } from '@epam/uui-core';
+import { IEditable, IHasRawProps, forwardRef } from '@epam/uui-core';
 import { ButtonProps } from '@epam/uui-components';
 import { ControlGroup } from '../layout';
 import { Button, ButtonMods } from '../buttons';
@@ -35,4 +35,5 @@ function MultiSwitchComponent<TValue>(props: MultiSwitchProps<TValue>, ref: Reac
     );
 }
 
-export const UuiMultiSwitch = React.forwardRef(MultiSwitchComponent) as <TValue>(props: MultiSwitchProps<TValue>, ref: React.ForwardedRef<HTMLDivElement>) => JSX.Element;
+export const MultiSwitch = forwardRef(MultiSwitchComponent);
+
